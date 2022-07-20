@@ -75,6 +75,11 @@ class RestaurantTest {
     @Test
     public void order_value_should_be_100_if_two_items_of_total_price_100_is_selected(){
         //WRITE UNIT TEST CASE HERE
-        Assertions.assertEquals(100, restaurant.getOrderValue());
+        List<String> orderItems = new ArrayList<String>();
+        restaurant.addToMenu("Sweet corn soup",50);
+        restaurant.addToMenu("Vegetable lasagne", 50);
+        orderItems.add("Sweet corn soup");
+        orderItems.add("Vegetable lasagne");
+        Assertions.assertEquals(100, restaurant.getOrderValue(orderItems));
     }
 }
