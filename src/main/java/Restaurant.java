@@ -52,7 +52,9 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
-
+    public int getOrderValue() {
+        return 0;
+    }
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
